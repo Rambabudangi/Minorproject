@@ -1,0 +1,101 @@
+*
+{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+html,body{
+    height: 100%;
+    width: 100%;
+}
+.main
+{
+    height: 100%;
+    width: 100%;
+    background-image: url(/IMG-20241128-WA0008.jpg);
+    background-position:center ;
+    background-size: cover;
+    background-repeat: no-repeat;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    flex-direction: column;
+    gap: 20px;
+
+}
+.head
+{
+    height: 120px;
+    width: 100%;
+    color: white;
+    display: flex;
+    justify-content: center;
+    align-items:center ;
+    font-size:3.2vw ;
+
+
+}
+.login{
+    
+    width: 420px;
+    display: flex;
+    justify-content:space-around;
+    align-items:center ;
+    flex-direction: column;
+    background-color:rgba(255, 255, 255, 0.513);
+    backdrop-filter: blur(10px);
+    gap: 35px;
+    padding:20px 30px ;
+    border-radius: 20px;
+   
+}
+.lg-head{
+    font-size:30px;
+}
+form{
+    
+    width: 100%;
+   
+    display: flex;
+    justify-content: space-around;
+    align-items:center ;
+    flex-direction: column;
+   
+    gap:25px ;
+    
+}
+
+label
+{
+    font-size:20px ;
+    font-weight: 600;
+
+}
+.lg{
+    padding: 8px 10px;
+    border-radius:5px ;
+    border: none;
+    margin-left:20px ;
+    background-color:rgb(190, 187, 187) ;
+    font-size: 16px;
+   
+
+}
+.lg2{
+    
+    
+    margin-left:30px ;
+   
+
+}
+button{
+    padding:8px 27px ;
+    font-size:large ;
+    border: 1px solid black;
+    border-radius: 5px;
+    background-color:rgb(132, 130, 130) ;
+}
+a{
+    text-decoration: none;
+    font-size: 20px;
+}

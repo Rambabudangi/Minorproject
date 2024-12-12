@@ -1,0 +1,122 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>GOLDEN HOUR EVENTS </title>
+    
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f9;
+        }
+        /* header {
+            background: #fa0606;
+            color: #fff;
+            padding: 1rem;  
+            text-align: center;
+        } */
+        .container {
+            padding: 20px;
+            display: flex;
+            flex-direction: row;
+            gap: 2rem;
+
+        }
+        .event-form {
+            background: #fff;
+            padding: 20px;
+            margin-bottom: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            height: 22rem;
+        }
+        .event-form input,
+        .event-form button {
+            width: 90%;
+            padding: 10px;
+            margin: 10px 0;
+            border: 1px solid #ccc;
+            border-radius: 5px;
+        }
+        .events-list {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+            width: 50%;
+        }
+        .event-item {
+            padding: 10px;
+            margin-bottom: 10px;
+            border-bottom: 1px solid #ddd;
+        }
+        footer {
+            background: #333;
+            color: #fff;
+            text-align: center;
+            padding: 1rem 0;
+            margin-top: 20px;
+        }
+    </style>
+</head>
+<body>
+    <!-- <header>
+        <h1>GOLDEN HOUR EVENTS </h1>
+    </header> -->
+
+    <div class="container">
+        <!-- Form to Add Event -->
+        <div class="event-form">
+            <h2>Add New Event</h2>
+            <form id="eventForm">
+                <input type="text" id="eventName" placeholder="Event Name" required>
+                <input type="date" id="eventDate" required>
+                <input type="text" id="eventLocation" placeholder="Event Location" required>
+                <button type="submit">Add Event</button>
+            </form>
+        </div>
+
+        <!-- Events List -->
+        <div class="events-list">
+            <h2>Upcoming Events</h2>
+            <div id="eventsContainer">
+                <!-- Events will be dynamically added here -->
+            </div>
+        </div>
+    </div>
+
+    <footer>
+        <p>&copy; 2024 Event Organization. All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        // JavaScript to Handle Event Addition
+        document.getElementById("eventForm").addEventListener("submit", function(e) {
+            e.preventDefault();
+
+            // Get form data
+            const eventName = document.getElementById("eventName").value;
+            const eventDate = document.getElementById("eventDate").value;
+            const eventLocation = document.getElementById("eventLocation").value;
+
+            // Create a new event element
+            const eventItem = document.createElement("div");
+            eventItem.className = "event-item";
+            eventItem.innerHTML = `
+                <h3>${eventName}</h3>
+                <p><strong>Date:</strong> ${eventDate}</p>
+                <p><strong>Location:</strong> ${eventLocation}</p>
+            `;
+
+            // Add to the events list
+            document.getElementById("eventsContainer").appendChild(eventItem);
+
+            // Clear form inputs
+            document.getElementById("eventForm").reset();
+        });
+    </script>
+</body>
+</html>

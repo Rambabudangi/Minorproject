@@ -1,0 +1,70 @@
+body {
+    font-family: Arial, sans-serif;
+   background-image: url(/WhatsApp\ Image\ 2024-11-29\ at\ 15.32.39_019a3eee.jpg);
+   background-size: cover;
+   background-position: center;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+.signup-container {
+    
+    padding: 10px 30px 15px 30px;
+    border-radius: 8px;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    background-color:rgba(255, 255, 255, 0.555);
+    backdrop-filter: blur(8px);
+    max-width: 380px;
+}
+
+h1 {
+    text-align: center;
+    margin-bottom: 20px;
+    color: #333;
+}
+
+.form-group {
+    margin-bottom: 15px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    font-weight: bold;
+    color: #555;
+}
+
+input {
+    width: 100%;
+    padding: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+}
+
+button {
+    width: 100%;
+    padding: 10px;
+    background: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    font-size: 16px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #0056b3;
+}
+
+.error {
+    color: red;
+    font-size: 12px;
+    display: none;
+    margin-top: 5px;
+}

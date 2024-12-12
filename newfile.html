@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Golden Hour Events</title>
+  <link rel="stylesheet" href="new_file.css">
+</head>
+<body>
+  <div class="container">
+    <h1>Golden Hour Events</h1>
+    <p>Find events happening during the Golden Hour.</p>
+    
+    <label for="location">Enter Location (City or Latitude, Longitude):</label>
+    <input type="text" id="location" placeholder="E.g., New York, NY or 40.7128,-74.0060">
+    <button onclick="getGoldenHour()">Get Golden Hour Events</button>
+
+    <div id="golden-hour-info">
+      <h3>Golden Hour Info:</h3>
+      <p id="sunrise-time"></p>
+      <p id="sunset-time"></p>
+      <p id="golden-hour-period"></p>
+    </div>
+
+    <div id="event-list">
+      <h3>Upcoming Events:</h3>
+      <ul id="events"></ul>
+    </div>
+  </div>
+
+  <script src="new.js"></script>
+</body>
+</html>
